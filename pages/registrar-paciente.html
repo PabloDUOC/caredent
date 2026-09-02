@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Caredent — Registrar paciente</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="../css/styles.css" rel="stylesheet">
+</link></head>
+<body>
+<div class="app">
+<nav class="sidebar">
+<div class="brand">
+<img alt="" class="brand__mark" src="../img/logo.svg" style="color:#F4FAF8"/>
+<span class="brand__word">Care<em>dent</em></span>
+</div>
+<div class="nav-group">
+<div class="nav-label">General</div>
+<a class="nav-link" data-nav="dashboard" href="dashboard.html">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M3 10l9-7 9 7"></path><path d="M5 9v10h14V9"></path></svg>
+        Inicio
+      </a>
+<a class="nav-link" data-nav="pacientes" href="pacientes.html">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c1.2-4 4-6 7-6s5.8 2 7 6"></path></svg>
+        Pacientes
+      </a>
+<a class="nav-link" data-nav="controles" href="controles.html">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="15" rx="2" width="16" x="4" y="5"></rect><path d="M8 3v4M16 3v4M4 10h16"></path></svg>
+        Controles
+      </a>
+</div>
+<div class="sidebar-foot">
+<div class="nav-group" style="margin-bottom:0">
+<a class="nav-link" data-nav="perfil" href="perfil.html">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c1.2-4 4-6 7-6s5.8 2 7 6"></path></svg>
+          Mi perfil
+        </a>
+<a class="nav-link" data-logout="" href="#">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"></path><path d="M16 17l5-5-5-5"></path><path d="M21 12H9"></path></svg>
+          Cerrar sesión
+        </a>
+</div>
+</div>
+</nav>
+<div>
+<header class="topbar">
+<div class="topbar__title">
+<span class="eyebrow">Gestión de pacientes</span>
+        Registrar paciente
+      </div>
+<div class="topbar__right">
+<div class="user-pill">
+<div class="avatar" data-user-avatar="">—</div>
+<div>
+<div data-user-name="" style="font-weight:600">—</div>
+<div class="text-muted" data-user-role="" style="font-size:11.5px">—</div>
+</div>
+</div>
+</div>
+</header>
+<main class="content">
+<form class="form-card" id="formPaciente" novalidate="">
+<div class="form-section-title">Datos personales</div>
+<div class="form-grid">
+<div class="field">
+<label for="nombre">Nombre</label>
+<input id="nombre" required="" type="text"/>
+<div class="field-error">Ingresa el nombre del paciente.</div>
+</div>
+<div class="field">
+<label for="apellidos">Apellidos</label>
+<input id="apellidos" required="" type="text"/>
+<div class="field-error">Ingresa los apellidos del paciente.</div>
+</div>
+<div class="field">
+<label for="rut">RUT</label>
+<input data-pattern="rut" id="rut" placeholder="12.345.678-9" required="" type="text"/>
+<div class="field-error">Ingresa un RUT válido, formato 12.345.678-9.</div>
+</div>
+<div class="field">
+<label for="fechaNacimiento">Fecha de nacimiento</label>
+<input id="fechaNacimiento" required="" type="date"/>
+<div class="field-error">Selecciona la fecha de nacimiento.</div>
+</div>
+<div class="field">
+<label for="telefono">Teléfono</label>
+<input data-pattern="phone" id="telefono" placeholder="+56 9 1234 5678" required="" type="text"/>
+<div class="field-error">Ingresa un teléfono de contacto válido.</div>
+</div>
+<div class="field">
+<label for="correo">Correo electrónico</label>
+<input id="correo" placeholder="nombre@correo.cl" required="" type="email"/>
+<div class="field-error">Ingresa un correo electrónico válido.</div>
+</div>
+<div class="field field--full">
+<label for="direccion">Dirección</label>
+<input id="direccion" placeholder="Calle, número, comuna" type="text"/>
+<div class="field-hint">Opcional — ayuda a contactar al paciente si es necesario.</div>
+</div>
+</div>
+<div class="form-section-title">Antecedentes básicos</div>
+<div class="form-grid">
+<div class="field field--full">
+<label for="motivoConsulta">Motivo de la primera consulta</label>
+<textarea id="motivoConsulta" placeholder="Ej: dolor en molar inferior derecho, control de rutina, etc." rows="3"></textarea>
+<div class="field-hint">Esta información se usará para crear la ficha clínica inicial.</div>
+</div>
+</div>
+<div class="form-actions">
+<a class="btn btn--ghost" href="pacientes.html">Cancelar</a>
+<button class="btn btn--primary" type="submit">Registrar paciente</button>
+</div>
+</form>
+</main>
+</div>
+</div>
+<script src="../js/app.js"></script>
+<script src="../js/registrar-paciente.js"></script>
+</body>
+</html>

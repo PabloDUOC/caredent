@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Caredent — Inicio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&amp;family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="../css/styles.css" rel="stylesheet">
+</link></head>
+<body>
+<div class="app">
+<nav class="sidebar">
+<div class="brand">
+<img alt="" class="brand__mark" src="../img/logo.svg" style="color:#F4FAF8"/>
+<span class="brand__word">Care<em>dent</em></span>
+</div>
+<div class="nav-group">
+<div class="nav-label">General</div>
+<a class="nav-link" data-nav="dashboard" href="dashboard.html">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M3 10l9-7 9 7"></path><path d="M5 9v10h14V9"></path></svg>
+        Inicio
+      </a>
+<a class="nav-link" data-nav="pacientes" href="pacientes.html">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c1.2-4 4-6 7-6s5.8 2 7 6"></path></svg>
+        Pacientes
+      </a>
+<a class="nav-link" data-nav="controles" href="controles.html">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="15" rx="2" width="16" x="4" y="5"></rect><path d="M8 3v4M16 3v4M4 10h16"></path></svg>
+        Controles
+      </a>
+</div>
+<div class="sidebar-foot">
+<div class="nav-group" style="margin-bottom:0">
+<a class="nav-link" data-nav="perfil" href="perfil.html">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c1.2-4 4-6 7-6s5.8 2 7 6"></path></svg>
+          Mi perfil
+        </a>
+<a class="nav-link" data-logout="" href="#">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"></path><path d="M16 17l5-5-5-5"></path><path d="M21 12H9"></path></svg>
+          Cerrar sesión
+        </a>
+</div>
+</div>
+</nav>
+<div>
+<header class="topbar">
+<div class="topbar__title">
+<span class="eyebrow">Panel principal</span>
+        Bienvenido/a de vuelta
+      </div>
+<div class="topbar__right">
+<div class="user-pill">
+<div class="avatar" data-user-avatar="">—</div>
+<div>
+<div data-user-name="" style="font-weight:600">—</div>
+<div class="text-muted" data-user-role="" style="font-size:11.5px">—</div>
+</div>
+</div>
+</div>
+</header>
+<main class="content">
+<div class="grid-cards">
+<div class="card">
+<div class="kpi__label">Pacientes registrados</div>
+<div class="kpi__value" id="kpiPacientes">—</div>
+<div class="kpi__sub">En la base de la clínica</div>
+</div>
+<div class="card">
+<div class="kpi__label">Controles pendientes</div>
+<div class="kpi__value" id="kpiControles">—</div>
+<div class="kpi__sub is-warn">Requieren agendar o confirmar</div>
+</div>
+<div class="card">
+<div class="kpi__label">Tratamientos en curso</div>
+<div class="kpi__value" id="kpiTratamientos">—</div>
+<div class="kpi__sub">Activos actualmente</div>
+</div>
+<div class="card">
+<div class="kpi__label">Próximo control</div>
+<div class="kpi__value" id="kpiProximo" style="font-size:20px">—</div>
+<div class="kpi__sub" id="kpiProximoSub">—</div>
+</div>
+</div>
+<div class="two-col">
+<div>
+<div class="section-title">
+            Próximos controles
+            <a class="link" href="controles.html">Ver todos</a>
+</div>
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>Paciente</th><th>Fecha</th><th>Motivo</th><th>Estado</th></tr>
+</thead>
+<tbody id="tablaProximos"></tbody>
+</table>
+</div>
+</div>
+<div>
+<div class="section-title">Accesos rápidos</div>
+<div class="quick-links">
+<a class="quick-link" href="pacientes.html">
+<div class="quick-link__icon">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="8" r="3.5"></circle><path d="M5 20c1.2-4 4-6 7-6s5.8 2 7 6"></path></svg>
+</div>
+<div>
+<div class="quick-link__title">Ver pacientes</div>
+<div class="quick-link__sub">Listado completo y búsqueda</div>
+</div>
+</a>
+<a class="quick-link" href="registrar-paciente.html">
+<div class="quick-link__icon">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+</div>
+<div>
+<div class="quick-link__title">Registrar paciente</div>
+<div class="quick-link__sub">Agregar un nuevo ingreso</div>
+</div>
+</a>
+<a class="quick-link" href="controles.html">
+<div class="quick-link__icon">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="15" rx="2" width="16" x="4" y="5"></rect><path d="M8 3v4M16 3v4M4 10h16"></path></svg>
+</div>
+<div>
+<div class="quick-link__title">Controles pendientes</div>
+<div class="quick-link__sub">Agenda de seguimiento</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+<script src="../js/app.js"></script>
+<script src="../js/dashboard.js"></script>
+</body>
+</html>
